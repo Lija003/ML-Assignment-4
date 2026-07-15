@@ -1,380 +1,502 @@
+# ML-Assignment-4
 <p align="center">
-
-<img
+  <img
     width="100%"
-    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Feature%20Engineering%20%26%20Regression%20Modeling&fontSize=48&fontAlignY=38&animation=fadeIn&desc=Data%20Preparation%20and%20Machine%20Learning%20Pipeline&descAlignY=60"
-    alt="Feature Engineering Banner"
+    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Data%20Cleaning&fontSize=60&fontAlignY=38&animation=fadeIn&desc=Professional%20Data%20Cleaning%20and%20Preprocessing%20with%20Python&descAlignY=60"
+    alt="Data Cleaning and Preprocessing Banner"
   />
-    
 </p>
 
 <p align="center">
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=22&duration=3000&color=22C55E&center=true&vCenter=true&width=900&lines=Clean+Reliable+Machine+Learning+Dataset;Feature+Engineering+and+Regression+Models;Built+with+Python+Pandas+Scikit-Learn+and+Jupyter" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=22&duration=3000&color=22C55E&center=true&vCenter=true&width=900&lines=Clean+Reliable+Analysis-Ready+Data;15+Data+Quality+Problems+Solved;Built+with+Python+Pandas+NumPy+and+Jupyter" alt="Typing SVG" />
 </p>
-
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
-<img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
-<img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
+  <img src="https://img.shields.io/badge/Google-Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" alt="Google Colab" />
 </p>
 
+---
 
-------------------------------------------------------------------------
+# 🧠 Project Overview ( Assignment 4 )
 
-# 🧠 Project Overview (Assignment 05)
+**Garments Dirty Data Cleaning & Preprocessing** is a complete data-quality project built with Python and Pandas.
 
-**Feature Engineering, Data Preparation & Regression Modeling** is a
-complete machine-learning preprocessing project built using Python and
-Scikit-Learn.
+The project transforms a deliberately corrupted Garments employee dataset into a clean, consistent, validated, and analysis-ready dataset. It identifies and resolves **15 different categories of data problems**, including missing values, duplicate records, invalid values, inconsistent labels, mixed date formats, outliers, incorrect data types, schema issues, and class imbalance.
 
-The project converts a noisy student performance dataset into a
-structured dataset suitable for regression and classification modeling.
+The notebook documents every cleaning step with:
 
-The workflow includes:
+- Problem identification
+- Before-and-after comparison
+- Cleaning logic
+- Explanations and comments
+- Visualizations
+- Validation checks
+- Final CSV export
 
--   Data quality inspection
--   Data cleaning
--   Missing value analysis
--   Duplicate removal
--   Categorical standardization
--   Feature engineering
--   Feature encoding
--   Feature scaling
--   Linear Regression
--   Logistic Regression
--   Model evaluation
-
-------------------------------------------------------------------------
+---
 
 # 🎯 Assignment Objective
 
-The objective is to clean:
+The main objective is to clean `dirty_dataset.csv` and generate:
 
-``` text
-student_dataset_dirty.csv
+```text
+cleaned_dataset.csv
 ```
 
-and build:
+The final dataset must be:
 
-``` text
-student_dataset_cleaned.csv
-```
+- Free from missing values
+- Free from exact duplicate rows
+- Free from duplicate employee IDs
+- Consistent in labels and spelling
+- Correctly typed
+- Validated against expected ranges
+- Ready for analysis or machine-learning preparation
 
-along with regression models for:
-
--   Predicting `Total_Score`
--   Predicting `Result` (Pass/Fail)
-
-------------------------------------------------------------------------
+---
 
 # 📊 Dataset Overview
 
-  Property                                         Value
-  ------------------------ -----------------------------
-  Dataset                    `student_dataset_dirty.csv`
-  Original rows                                   10,000
-  Original columns                                    15
-  Cleaned rows                                     9,850
-  Cleaned columns                                     16
-  Removed duplicate rows                             150
-  Environment                           Jupyter Notebook
-  Language                                    Python 3.x
-
-------------------------------------------------------------------------
-
-# 📂 Project Files
-
-  -------------------------------------------------------------------------------
-  File                                        Description
-  ------------------------------------------- -----------------------------------
-  `Assignment_05_Regression_Complete.ipynb`   Complete notebook containing
-                                              cleaning, feature engineering,
-                                              Linear Regression and Logistic
-                                              Regression
-
-  `student_dataset_dirty.csv`                 Original raw dataset
-
-  `student_dataset_cleaned.csv`               Structurally cleaned dataset
-
-  `README.md`                                 Project documentation
-  -------------------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-# 🧹 Data Cleaning Process
-
-## Duplicate Removal
-
--   Identified duplicate records.
--   Removed 150 duplicate rows.
-
-## Data Type Correction
-
-Converted:
-
--   Age
--   Math Score
--   Science Score
--   English Score
-
-into proper numeric formats.
-
-Invalid text values were converted into missing values.
-
-## Categorical Cleaning
-
-Standardized:
-
--   Gender
--   City
--   Class
--   Parent Education
--   Internet Access
--   Result
-
-Example:
-
-``` text
-male
-MALE
-Male
-
-↓
-
-Male
-```
-
-## Invalid Value Handling
-
-Applied validation rules:
-
--   Age: 5--25 years
--   Attendance: 0--100%
--   Study hours: 0--16 hours/day
--   Subject scores: 0--100
-
-Invalid values were replaced with missing values.
-
-------------------------------------------------------------------------
-
-# 🧬 Feature Engineering
-
-Created additional features:
-
-## Average_Score
-
-Mean score calculated from:
-
--   Math Score
--   Science Score
--   English Score
-
-## Study_Efficiency
-
-Represents relationship between study time and attendance.
-
-## Attendance_Category
-
-Attendance converted into categories:
-
-  Category   Range
-  ---------- --------
-  Low        \<60
-  Medium     60--80
-  High       \>80
-
-------------------------------------------------------------------------
-
-# 🔢 Feature Preparation
-
-## Encoding
-
-Categorical variables were encoded using:
-
-``` text
-One-Hot Encoding
-```
-
-Reason:
-
-Categorical variables have no natural ranking, therefore label encoding
-may create false relationships.
-
-## Scaling
-
-Numerical features were standardized using:
-
-``` text
-StandardScaler
-```
-
-Scaling was applied after train-test splitting to prevent data leakage.
-
-------------------------------------------------------------------------
-
-# 📈 Linear Regression Model
-
-## Target
-
-``` text
-Total_Score
-```
-
-## Data Split
-
-``` text
-80% Training
-20% Testing
-```
-
-## Leakage Prevention
-
-The following features were excluded:
-
--   Math_Score
--   Science_Score
--   English_Score
-
-Reason:
-
-`Total_Score` is directly calculated from these variables.
-
-Including them would create target leakage.
-
-## Evaluation
-
-Metrics:
-
--   R² Score
--   MAE
--   RMSE
-
-Result:
-
-``` text
-R² ≈ -0.005
-```
-
-Interpretation:
-
-Available demographic and behavioral features show no meaningful linear
-relationship with total score.
-
-------------------------------------------------------------------------
-
-# 🤖 Logistic Regression Model
-
-## Target
-
-``` text
-Result (Pass/Fail)
-```
-
-Binary conversion:
-
-``` text
-Pass = 1
-Fail = 0
-```
-
-## Evaluation Metrics
-
--   Accuracy
--   Precision
--   Recall
--   F1-score
--   ROC-AUC
-
-Result:
-
-``` text
-Accuracy ≈ 49%
-ROC-AUC ≈ 0.49
-```
-
-Interpretation:
-
-The model performs close to random guessing because predictors have weak
-relationship with the target.
-
-------------------------------------------------------------------------
-
-# 🔄 Machine Learning Pipeline
-
-``` mermaid
+| Property | Value |
+|---|---:|
+| Dataset | `dirty_dataset.csv` |
+| Original rows | 20,300 |
+| Original columns | 15 |
+| Final rows | 19,801 |
+| Final columns | 14 |
+| Exact duplicate rows found | 300 |
+| Duplicate employee IDs found | 499 |
+| Target majority class | Approximately 95% |
+| Target minority class | Approximately 5% |
+| Language | Python 3.x |
+| Environment | Jupyter Notebook / Google Colab |
+
+---
+
+# 🧾 Dataset Columns
+
+| Column | Expected Type | Main Data Problems |
+|---|---|---|
+| `employee_id` | Integer | Duplicate identifiers |
+| `name` | String | Clean reference column |
+| `age` | Integer | Missing and invalid values |
+| `salary` | Float | Missing values, symbols, negatives, outliers |
+| `join_date` | Date | Missing values and mixed formats |
+| `department` | String | Missing, inconsistent, misspelled labels |
+| `gender` | String | Missing, empty, inconsistent labels |
+| `country` | String | Missing and inconsistent labels |
+| `city` | String | Missing values and spelling mistakes |
+| `weight_kg` | Float | Missing values and `kg` suffix |
+| `is_active` | Boolean | Mixed boolean and string values |
+| `review` | String | Missing and noisy text |
+| `price` | Float | Missing, negative, and currency-formatted values |
+| `weight_kg_duplicate` | Empty | Entire column is null |
+| `target` | Integer | Severe class imbalance |
+
+---
+
+# ⚡ Data Quality Problems Solved
+
+| No. | Problem | Cleaning Strategy |
+|---:|---|---|
+| 01 | Missing values | Median, mode, fallback values, and median date |
+| 02 | Exact duplicate rows | Removed with `drop_duplicates()` |
+| 03 | Duplicate employee IDs | Kept first unique employee record |
+| 04 | Mixed date formats | Parsed using explicit date formats |
+| 05 | Numeric data stored as text | Removed `$`, commas, and `kg` |
+| 06 | Inconsistent labels | Standardized with mapping dictionaries |
+| 07 | Spelling mistakes | Corrected city and department names |
+| 08 | Salary outliers | Detected and capped using the IQR method |
+| 09 | Invalid values | Converted to missing and imputed safely |
+| 10 | Noisy review text | Replaced meaningless text with `No Review` |
+| 11 | Boolean strings | Converted `True`, `False`, `1`, and `0` |
+| 12 | Incorrect data types | Cast to integer, float, datetime, and boolean |
+| 13 | Range violations | Validated age, price, and salary boundaries |
+| 14 | Class imbalance | Analyzed and demonstrated random oversampling |
+| 15 | Schema issue | Removed the entirely null duplicate column |
+
+---
+
+# 🧭 Cleaning Pipeline
+
+```mermaid
 flowchart TD
-A[Raw Dataset] --> B[Data Inspection]
-B --> C[Cleaning]
-C --> D[Feature Engineering]
-D --> E[Encoding]
-E --> F[Train Test Split]
-F --> G[Scaling and Imputation]
-G --> H[Linear Regression]
-G --> I[Logistic Regression]
-H --> J[Evaluation]
-I --> J
+    A["Load dirty_dataset.csv"] --> B["Create a safe DataFrame copy"]
+    B --> C["Inspect shape, types, nulls and duplicates"]
+    C --> D["Normalize spaces and empty strings"]
+    D --> E["Remove exact duplicate rows"]
+    E --> F["Remove duplicate employee IDs"]
+    F --> G["Convert numeric text values"]
+    G --> H["Parse mixed date formats"]
+    H --> I["Standardize categorical labels"]
+    I --> J["Correct spelling mistakes"]
+    J --> K["Convert boolean values"]
+    K --> L["Handle invalid values"]
+    L --> M["Detect and cap salary outliers"]
+    M --> N["Impute missing values"]
+    N --> O["Drop unusable schema columns"]
+    O --> P["Set correct data types"]
+    P --> Q["Run validation assertions"]
+    Q --> R["Export cleaned_dataset.csv"]
 ```
 
-------------------------------------------------------------------------
+---
 
 # 🏗 Technology Stack
 
--   Python
--   Pandas
--   NumPy
--   Scikit-Learn
--   Matplotlib
--   Seaborn
--   Jupyter Notebook
+### Programming Language
 
-------------------------------------------------------------------------
+- Python 3.x
 
-# 📁 Final Project Structure
+### Data Processing
 
-``` text
-Assignment_05/
+- Pandas
+- NumPy
+
+### Visualization
+
+- Matplotlib
+- Seaborn
+
+### Imbalanced Data Handling
+
+- imbalanced-learn
+- scikit-learn
+
+### Development Environment
+
+- Google Colab
+- Jupyter Notebook
+- JupyterLab
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+# 🔍 Key Cleaning Decisions
+
+## Missing Numeric Values
+
+Numeric columns are filled using the **median** because it is more resistant to extreme values than the mean.
+
+```python
+df_clean[column] = df_clean[column].fillna(
+    df_clean[column].median()
+)
+```
+
+## Missing Categorical Values
+
+Categorical columns are filled using the most frequently occurring value.
+
+```python
+df_clean[column] = df_clean[column].fillna(
+    df_clean[column].mode()[0]
+)
+```
+
+## Duplicate IDs
+
+The first record for each employee ID is preserved.
+
+```python
+df_clean = df_clean.drop_duplicates(
+    subset=["employee_id"],
+    keep="first"
+)
+```
+
+## Salary Outliers
+
+Salary outliers are identified using the Interquartile Range:
+
+```text
+IQR = Q3 - Q1
+Lower Bound = Q1 - 1.5 × IQR
+Upper Bound = Q3 + 1.5 × IQR
+```
+
+Extreme salary values are capped using the calculated boundaries.
+
+## Class Imbalance
+
+The original class distribution is preserved in the exported clean dataset.
+
+Random oversampling is demonstrated separately for machine-learning preparation. In a real ML workflow, oversampling should only be applied to the training set after the train-test split.
+
+---
+
+# 📈 Before and After Results
+
+| Data Quality Check | Before Cleaning | After Cleaning |
+|---|---:|---:|
+| Rows | 20,300 | 19,801 |
+| Columns | 15 | 14 |
+| Exact duplicate rows | 300 | 0 |
+| Duplicate employee IDs | 499 | 0 |
+| Missing values | Present | 0 |
+| Invalid ages | Present | 0 |
+| Negative prices | Present | 0 |
+| Extreme salary values | Present | Capped |
+| Mixed date formats | Present | Standardized |
+| All-null columns | 1 | 0 |
+
+---
+
+# ✅ Final Validation
+
+The notebook uses assertions to verify the final dataset.
+
+```python
+assert df_clean.isnull().sum().sum() == 0
+assert df_clean.duplicated().sum() == 0
+assert df_clean["employee_id"].duplicated().sum() == 0
+assert df_clean["age"].between(18, 65).all()
+assert df_clean["salary"].between(15000, 500000).all()
+assert (df_clean["price"] > 0).all()
+assert "weight_kg_duplicate" not in df_clean.columns
+```
+
+Expected final result:
+
+```text
+All validation tests passed successfully.
+
+Final shape: (19801, 14)
+Missing values: 0
+Exact duplicates: 0
+Duplicate employee IDs: 0
+```
+
+---
+
+# 🎯 Target Class Distribution
+
+The cleaned dataset preserves the original target distribution:
+
+| Target Class | Records | Approximate Percentage |
+|---:|---:|---:|
+| `0` | 18,814 | 95.02% |
+| `1` | 987 | 4.98% |
+
+This imbalance is analyzed visually and can be handled during model training with:
+
+- Random oversampling
+- Class weights
+- SMOTE after suitable feature encoding
+- Stratified train-test splitting
+
+---
+
+# 📂 Project Structure
+
+```text
+data-cleaning-assignment/
 │
 ├── README.md
-├── Assignment_05_Regression_Complete.ipynb
-├── student_dataset_dirty.csv
-├── student_dataset_cleaned.csv
+├── data_cleaning.ipynb
+├── dirty_dataset.csv
+├── cleaned_dataset.csv
 └── requirements.txt
 ```
 
-------------------------------------------------------------------------
+### File Descriptions
 
-# ▶️ How to Run
+| File | Description |
+|---|---|
+| `README.md` | Complete project documentation |
+| `data_cleaning.ipynb` | All cleaning steps, explanations, plots, and validation |
+| `dirty_dataset.csv` | Original unclean dataset |
+| `cleaned_dataset.csv` | Final validated dataset |
+| `requirements.txt` | Required Python libraries |
 
-1.  Open the notebook:
+---
 
-``` text
-Assignment_05_Regression_Complete.ipynb
+# ⚙️ Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/miniSOWAD/YOUR_REPOSITORY_NAME.git
+cd YOUR_REPOSITORY_NAME
 ```
 
-2.  Keep dataset files in the same directory.
+## Create a Virtual Environment
 
-3.  Restart kernel.
+### Windows
 
-4.  Run all cells.
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-5.  Export notebook as PDF.
+### Linux or macOS
 
-------------------------------------------------------------------------
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Start JupyterLab
+
+```bash
+jupyter lab
+```
+
+Open `data_cleaning.ipynb` and run all cells from top to bottom.
+
+---
+
+# ☁️ Run in Google Colab
+
+1. Open Google Colab.
+2. Upload or open `data_cleaning.ipynb`.
+3. Place `dirty_dataset.csv` inside:
+
+```text
+/content/sample_data/dirty_dataset.csv
+```
+
+4. Run every cell in order.
+5. The notebook will create:
+
+```text
+/content/cleaned_dataset.csv
+```
+
+6. Download the final dataset using:
+
+```python
+from google.colab import files
+
+files.download("/content/cleaned_dataset.csv")
+```
+
+---
+
+# 📦 Requirements
+
+The `requirements.txt` file contains:
+
+```text
+pandas
+numpy
+matplotlib
+seaborn
+imbalanced-learn
+scikit-learn
+jupyterlab
+```
+
+Install all packages with:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 📊 Recommended Visualizations
+
+The notebook should include:
+
+- Missing-value heatmap
+- Salary boxplot before cleaning
+- Salary boxplot after outlier treatment
+- Target class distribution bar chart
+- Before-and-after data-quality summary
+
+These visualizations make the cleaning decisions easier to understand and strengthen the assignment documentation.
+
+---
+
+# 🧪 Reproducibility
+
+Before submitting the project:
+
+1. Restart the notebook runtime.
+2. Run all cells from the beginning.
+3. Confirm that no cell produces an error.
+4. Verify that `cleaned_dataset.csv` is generated.
+5. Confirm that all validation assertions pass.
+6. Push the final files to GitHub.
+
+In Jupyter:
+
+```text
+Kernel → Restart Kernel and Run All Cells
+```
+
+In Google Colab:
+
+```text
+Runtime → Restart session and run all
+```
+
+---
+
+# 🚀 GitHub Submission
+
+```bash
+git init
+git add .
+git commit -m "Add complete data cleaning assignment"
+git branch -M main
+git remote add origin https://github.com/miniSOWAD/YOUR_REPOSITORY_NAME.git
+git push -u origin main
+```
+
+Recommended commit messages:
+
+```text
+docs: add dataset exploration
+fix: remove duplicate rows and employee IDs
+fix: normalize numeric and date columns
+fix: standardize categorical labels
+fix: handle invalid values and salary outliers
+feat: add class imbalance analysis
+docs: add final validation and project README
+```
+
+---
+
+# 🌍 Future Improvements
+
+- Build an automated reusable cleaning pipeline
+- Add unit tests for every validation rule
+- Add a data-quality report with percentages
+- Add interactive visualizations
+- Build a Streamlit interface for CSV upload and cleaning
+- Add automatic schema detection
+- Add configurable outlier-handling strategies
+- Integrate experiment tracking for ML preprocessing
+
+---
 
 # 👨‍💻 Author
 
-Student Assignment Submission
+**Lija Moni**
 
-```{=html}
+Web Developer  
+Data Analysis Enthusiast  
+Problem Solver  
+
+GitHub: [@lija003](https://github.com/lija003)
+
+---
+
 <p align="center">
-```
-`<b>`{=html}⭐ Data Preparation • Feature Engineering • Regression
-Modeling ⭐`</b>`{=html}
-```{=html}
+  <b>⭐ If this project helped you, consider giving the repository a star!</b>
 </p>
-```
