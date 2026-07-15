@@ -1,5 +1,5 @@
 <p align="center">
-```
+
 <img
     width="100%"
     src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Feature%20Engineering%20%26%20Regression%20Modeling&fontSize=48&fontAlignY=38&animation=fadeIn&desc=Data%20Preparation%20and%20Machine%20Learning%20Pipeline&descAlignY=60"
@@ -7,22 +7,22 @@
   />
     
 </p>
-```
+
 <p align="center">
-```
+
 <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=22&duration=3000&color=22C55E&center=true&vCenter=true&width=900&lines=Clean+Reliable+Machine+Learning+Dataset;Feature+Engineering+and+Regression+Models;Built+with+Python+Pandas+Scikit-Learn+and+Jupyter" />
 </p>
-```
-```
+
+
 <p align="center">
-```
+
 <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Pandas-Data%20Processing-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
 <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
 <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-```
+
 </p>
-```
+
 
 ------------------------------------------------------------------------
 
